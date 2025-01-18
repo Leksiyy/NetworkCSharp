@@ -10,7 +10,7 @@ class Program
     static async Task Main(string[] args)
     {
         var connection = new HubConnectionBuilder()
-            .WithUrl("http://localhost:5080/currencyHub") // URL вашего сервера
+            .WithUrl("http://localhost:5080/currencyHub")
             .Build();
 
         connection.On<CurrencyRate>("UpdateCurrencies", currencyRate =>
